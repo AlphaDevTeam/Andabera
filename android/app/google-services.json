@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "303714752509",
+    "firebase_url": "https://andabera-311b0.firebaseio.com",
+    "project_id": "andabera-311b0",
+    "storage_bucket": "andabera-311b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303714752509:android:94a1060baf56589c53ab94",
+        "android_client_info": {
+          "package_name": "com.alphadevs.andabera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303714752509-m23ngdueek070cn3sh8722bmoo9t9vqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alphadevs.andabera",
+            "certificate_hash": "a984a4bff3e43c32619a4842c3fa60842754994f"
+          }
+        },
+        {
+          "client_id": "303714752509-spjgg2ft010jmdeummuhcgbsd9c3hukd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsIzqGuQQHjQZVmKyn3h80sMYEeaIG6SA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303714752509-spjgg2ft010jmdeummuhcgbsd9c3hukd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
