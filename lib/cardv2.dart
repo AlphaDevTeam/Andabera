@@ -13,7 +13,7 @@ class PlanetRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 120.0,
+        height: 150.0,
         margin: const EdgeInsets.symmetric(
           vertical: 16.0,
           horizontal: 24.0,
@@ -52,7 +52,7 @@ final planetThumbnail = new Container(
   );
 
 Container CardV2(CardDetails cardDetails, BuildContext context) => new Container(
-  height: 124.0,
+  height: 150.0,
   margin: new EdgeInsets.only(left: 46.0),
   decoration: new BoxDecoration(
     color: Colors.blue,
@@ -79,19 +79,20 @@ ListTile makeListTile(CardDetails cardDetails, BuildContext context) => ListTile
       child: Icon(Icons.autorenew, color: Colors.white),
     ),
     title: Text(
-      cardDetails.cardTitle,
-      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold ,fontSize: 25),
+      cardDetails.cardTitle.toUpperCase(),
+      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold ,fontSize: 20),
     ),
     // subtitle: Text("Intermediate", style: TextStyle(color: Colors.white)),
 
     subtitle: Column(
       children: <Widget>[
-        SizedBox(height: 30),
+        SizedBox(height: 15),
+
         Row(
           children: <Widget>[
-            Icon(Icons.linear_scale, color: Colors.yellowAccent),
+            Icon(Icons.supervised_user_circle, color: Colors.amberAccent),
             SizedBox(width: 5),
-            Text(cardDetails.relatedChanel, style: TextStyle(color: Colors.white,fontStyle: FontStyle.italic)),
+            Text(cardDetails.createdUser, style: TextStyle(color: Colors.white,fontStyle: FontStyle.italic))
           ],
         ),
         Row(
@@ -101,11 +102,18 @@ ListTile makeListTile(CardDetails cardDetails, BuildContext context) => ListTile
             Text(cardDetails.createdDate.toString(), style: TextStyle(color: Colors.white,fontStyle: FontStyle.italic))
           ],
         ),
-
+        Row(
+          children: <Widget>[
+            Icon(Icons.chat, color: Colors.grey),
+            SizedBox(width: 5),
+            Text(cardDetails.relatedChanel.toUpperCase(), style: TextStyle(color: Colors.white,fontStyle: FontStyle.italic)),
+          ],
+        ),
+        SizedBox(height: 15),
       ],
     ),
     trailing:
-    Icon(Icons.markunread_mailbox, color: Colors.white, size: 30.0),
+    Icon(Icons.aspect_ratio, color: Colors.white, size: 30.0),
     onTap: () {
       Navigator.push(context,MaterialPageRoute(builder: (context) => DetailPage(cardDetails: cardDetails)));
     },

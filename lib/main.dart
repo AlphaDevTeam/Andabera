@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:andabera/alpha_pay_module.dart';
 import 'package:andabera/auth.dart';
 import 'package:andabera/card_details.dart';
 import 'package:andabera/cardv1.dart';
@@ -8,6 +9,8 @@ import 'package:andabera/cardv2.dart';
 import 'package:andabera/login_screen.dart';
 import 'package:andabera/message_form.dart';
 import 'package:andabera/profile.dart';
+import 'package:andabera/video_page.dart';
+import 'package:andabera/web_view_controller.dart';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -123,7 +126,15 @@ class _MessageHandlerState extends State<MessageHandler> {
           children: <Widget>[
             IconButton(
               icon: Icon(Icons.home, color: Colors.white),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return AlphaPay();
+                      },
+                    )
+                );
+              },
             ),
             IconButton(
               icon: Icon(Icons.blur_on, color: Colors.white),
@@ -139,7 +150,15 @@ class _MessageHandlerState extends State<MessageHandler> {
             ),
             IconButton(
               icon: Icon(Icons.hotel, color: Colors.white),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return VideoPage();
+                      },
+                    )
+                );
+              },
             ),
             IconButton(
               icon: Icon(Icons.account_box, color: Colors.white),
